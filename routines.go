@@ -14,7 +14,7 @@ func processMessage(task *sync.WaitGroup) {
 	fmt.Println("Print value=", v)
 }
 
-func main() {
+func main10() {
 
 	ch = make(chan int, 10)
 
