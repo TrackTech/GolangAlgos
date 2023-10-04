@@ -19,13 +19,16 @@ type WalmartData struct {
 
 func DataProcessorRoutine(task *sync.WaitGroup, ch <-chan WalmartData) {
 	defer task.Done()
+	counter := 0
 	for {
-		element, ok := <-ch
+		//element, ok := <-ch
+		_, ok := <-ch
 		if !ok {
-			fmt.Println("Channel exhausted-terminating routine")
+			fmt.Println("Channel exhausted-terminating routine.Processed = ", counter)
 			break
 		}
-		fmt.Println(element)
+		counter++
+		//fmt.Println(element)
 	}
 }
 
@@ -65,7 +68,12 @@ func main() {
 
 	var waitGroup sync.WaitGroup
 
-	waitGroup.Add(2)
+	waitGroup.Add(7)
+	go DataProcessorRoutine(&waitGroup, chanData)
+	go DataProcessorRoutine(&waitGroup, chanData)
+	go DataProcessorRoutine(&waitGroup, chanData)
+	go DataProcessorRoutine(&waitGroup, chanData)
+	go DataProcessorRoutine(&waitGroup, chanData)
 	go DataProcessorRoutine(&waitGroup, chanData)
 	go DataWriterRoutine(&waitGroup, chanData)
 
