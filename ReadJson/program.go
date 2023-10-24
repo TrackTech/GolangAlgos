@@ -19,12 +19,12 @@ func main() {
 	family := []types.Person{}
 
 	family = append(family, types.Person{
-		Name: "Rushikesh",
+		Name: "Golang",
 		Age:  42,
 		DOB:  time.Date(1981, time.March, 25, 0, 0, 0, 0, time.UTC),
 	})
 	family = append(family, types.Person{
-		Name: "Olga",
+		Name: "Python",
 		Age:  40,
 		DOB:  time.Date(1983, time.February, 12, 0, 0, 0, 0, time.UTC),
 	})

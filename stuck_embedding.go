@@ -35,7 +35,7 @@ func main() {
 	}
 
 	class = append(class, student{
-		name: "Rushikesh",
+		name: "GoLang",
 		student_address: address{
 			city:  "san jose",
 			state: "ca",

@@ -7,7 +7,7 @@ import (
 
 func main2() {
 
-	s := "rushikesh"
+	s := "developer"
 
 	for i := 0; i < len(s); i++ {
 		fmt.Println(s[i])
