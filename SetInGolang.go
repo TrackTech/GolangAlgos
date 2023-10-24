@@ -8,12 +8,12 @@ func main() {
 
 	mySet = make(map[string]struct{})
 
-	mySet["rushikesh"] = struct{}{}
-	mySet["ruta"] = struct{}{}
+	mySet["Golang"] = struct{}{}
+	mySet["Python"] = struct{}{}
 
-	_, exists := mySet["rushikesh"]
+	_, exists := mySet["Golang"]
 	if exists {
-		fmt.Println("rushikesh in set")
+		fmt.Println("Golang in set")
 	}
 	_, exists = mySet["asdf"]
 	if !exists {

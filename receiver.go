@@ -14,14 +14,14 @@ func (this Person) Object_Receiver() {
 }
 
 func (this *Person) Pointer_Receiver() {
-	this.Name = "Olga"
+	this.Name = "Python"
 	fmt.Printf("Pointer changes the value of the object passed")
 }
 
 // func main() {
 // 	var p Person
 // 	p = Person{
-// 		Name:   "Rushikesh",
+// 		Name:   "Golang",
 // 		Age:    42,
 // 		Salary: 0.0,
 // 	}
